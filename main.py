@@ -6,7 +6,7 @@ from weather_api import get_weather
 
 load_dotenv()
 
-city = "Rosselange"
+city = os.getenv("CITY")
 geolocator = Nominatim(user_agent="meteo-discord")
 location = geolocator.geocode(city)
 
